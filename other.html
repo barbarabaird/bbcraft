@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>BB Crafts</title>
+	<meta name="description" content="Homebased Craft business" />
+	<meta name="keywords" content="BB Crafts, Cards, Scrapbooks, Home Decor" />
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="Barbara Baird"/>
+	<link type="text/css" rel="stylesheet" href="bbcraft.css" media="all" />
+
+	<script >
+		
+		function dropdown() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+
+		window.onclick = function(e) {
+			if (!e.target.matches('.dropbtn')) {
+
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var d = 0; d < dropdowns.length; d++) {
+					var openDropdown = dropdowns[d];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+
+	
+
+	<div id="header">
+		<img class="logo" src="header.png" alt="BB Crafts logo" />
+
+
+	</div>
+
+
+
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn" onclick="dropdown()">Projects</a>
+			<div class="dropdown-content" id="myDropdown">
+				<a href="cards.html">Cards</a>
+				<a href="scrapbook.html">Scrapbook</a>
+				<a href="journaling.html">Journaling</a>
+				<a href="other.html">Other</a>
+			</div>
+		</li>
+		<li><a href="product.html">Products</a></li>
+		<li><a href="resources.html">Resources</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="order.html">Order</a></li>
+	</ul>
+
+
+
+
+	<div class="gallery" >
+
+		<h1>Other Products</h1>
+
+
+		<div class="thumbnails">
+			<img onmouseover="getElementById('preview1').src=this.src" id="img1" src="other/other7.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img2" src="other/other1.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img3" src="other/other2.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img4" src="other/other3.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img5" src="other/other4.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img6" src="other/other5.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img7" src="other/other6.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img8" src="other/other8.jpg" alt="" />
+			<img onmouseover="getElementById('preview1').src=this.src" id="img9" src="other/other9.jpg" alt="" />
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="preview" >
+		<img id="preview1" src="other/other7.jpg" alt=""/>
+		</div>
+
+	</div>
+
+
+
+
+
+
+	<div id="footer">
+		<p>Copyright &#169; 2016 Barbara Baird
+			<br>
+			<a href="barbara@bairdsnet.net">barbara@bairdsnet.net</a>
+			<br>
+
+			(512)-961-3447
+			<br>
+
+		</p>
+	</div>
+
+
+	<div class="valid">  
+		<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fnova.umuc.edu%2F~ct388a05%2Ffinal%2Fother.html">
+			<img style="valid" src="htmlvalid.png" alt="HTML5 and CSS3 logo with checkmark" />
+		</a>
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fnova.umuc.edu%2F~ct388a05%2Ffinal%2Fbbcraft.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">
+			<img style="valid" src="cssvalid.png" alt="HTML5 and CSS3 logo with checkmark" />
+		</a>
+		<br>
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+body {
+   background-image: url("background.png");
+
+
+   font-family: "Comic Sans MS";
+   
+}
+
+.logo { display: block;
+    margin:0 auto;
+    border: double; 
+}
+
+ul {
+
+   border: solid 1px black;
+   background-color:#444;
+   padding:0px;
+   
+   text-align:center;
+   border-radius: 4px;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+
+
+   list-style-type: none;
+   
+
+
+
+   margin:0 auto;
+   font-size:0;    
+   box-sizing:content-box;
+   
+   overflow: hidden;
+
+}
+
+
+
+li {
+ display: inline;
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+ border:0;
+ background-image:none;
+}
+
+li a:hover {
+    background-position: 0% -60px;
+    color: white;}
+
+    li a, .dropbtn {
+        text-align: center;
+        display: inline-block;
+        font: normal 11px Verdana;
+        background: url('nav.gif') no-repeat left top;
+        padding: 10px 20px;/*This defines the size of each menu item*/
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+    li.dropdown {
+        display: inline-block;
+
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-position: 0% -60px;
+        color: white;}
+
+        .show {display:block;}
+
+
+        .content{
+            width: 40%;
+            margin-top: 40px;
+            margin-left: 60px;
+            font-size: 24px;
+            margin-right: 60px;
+            float: left;
+        }
+
+
+        #footer { position: relative;
+            padding-left: 150px;
+            float: right;
+            width: 100%;
+            height: 75px;
+            
+            clear:both;        
+            
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #464747;
+            
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            padding:10px; 
+        }   
+
+        .valid { float:right; 
+            padding-top: 10px;
+            
+        } 
+
+        .gallery {
+            margin-top: 50px;
+            margin-left: 250px;
+            width: 700px;
+            text-align: center;
+
+
+        }
+
+        .thumbnails img {
+            
+            height: 80px;
+            border: 4px solid #555;
+            padding: 1px;
+            
+        }
+
+        .thumbnails img:hover {
+            border: 4px solid #74b4ab;
+            cursor:pointer;
+        }
+
+        .preview img {
+            border: 4px solid #444;
+            padding: 1px;
+            
+        }
+        #clip {padding-left: 1200px;
+            width:100px;}
+            #clip img { float: right;
+                padding: 0px; 
+                margin-top: 40px;
+                margin-left: 60px;
+                border:8px double #021a40;
+
+            }
+
+            #barbara {
+                width:auto;
+                margin-top: 60px;
+                margin-right: 40px;
+                font-size: 18px;
+                margin-left: 20px;
+                float: left;
+            }
+
+
+            #barbara img { float: left;
+                padding: 0px; 
+                margin-top: 40px;
+                margin-right: 100px;
+                border:8px double #021a40;
+
+            }
+            #donna {
+                width:auto;
+                margin-top: 400px;
+                margin-left: 60px;
+                font-size: 18px;
+                margin-right: 50px;
+                
+            }
+
+
+
+            #donna img { float: right;
+                margin-left: 100px;
+                padding: 0px; 
+                border:8px double #021a40;
+
+            }
+
+            #meet { font-size: 18px;
+                width: 500px;
+                margin-left: 200px;
+                text-align: center; }
+
+                .video h1 {text-align: center;
+                    font-size: 500%;
+                    color:#94d0c4;
+                    text-shadow: 2px 2px #035242;
+                }
+
+                .video p {text-align: center;}
+
+                iframe {margin-left: 60px;}
+
+                .favorite { margin-left: 40px; }
+                .favorite p {  width: 80%;
+                   float: right;
+                   margin-right: 100px;
+               }
+
+               h1 {text-align: center;
+                font-size: 500%;
+                color:#94d0c4;
+                text-shadow: 2px 2px #035242;
+            }
+            .favorite h2 {text-align: center;}
+
+            textarea {
+                width:600px;
+                height: 150px;
+
+            }
+
+
+
+
+
+
+

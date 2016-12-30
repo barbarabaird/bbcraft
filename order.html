@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>Contact Form</title>
+	<meta name="description" content="BB Crafts Contact" />
+	<meta name="author" content="Barbara Baird"/>
+	<link type="text/css" rel="stylesheet" href="bbcraft.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="contact.css" media="all" />
+
+	<script>
+
+		function dropdown() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+
+		window.onclick = function(e) {
+			if (!e.target.matches('.dropbtn')) {
+
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var d = 0; d < dropdowns.length; d++) {
+					var openDropdown = dropdowns[d];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<div id="header">
+		<img class="logo" src="header.png" alt="BB Craft Logo" />
+
+
+	</div>
+
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn" onclick="dropdown()">Projects</a>
+			<div class="dropdown-content" id="myDropdown">
+				<a href="cards.html">Cards</a>
+				<a href="scrapbook.html">Scrapbook</a>
+				<a href="journaling.html">Journaling</a>
+				<a href="other.html">Other</a>
+			</div>
+		</li>
+		<li><a href="product.html">Products</a></li>
+		<li><a href="resources.html">Resources</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="order.html">Order</a></li>
+	</ul>
+
+
+
+	<h1> Order  </h1>
+	<h4>Prices are different for each order.  Please fill out this form and we will get back with you on the 
+		details for your order. <br> Once we have decided on exactly what you are wanting we will be able to give you a price.
+	</h4>
+	<img class="floatright" src="craftlady.png" alt="Lady holding various craft items" />
+
+	<form id="contact" name="contact" action="MAILTO:barbara@bairdsnet.net" method="post" enctype="text/plain" >
+
+		
+		<label> Name: </label>
+		<input  type="text" name="name" id="name" value="Name" onfocus="clearThis(this)" />
+		<br>
+		<br>
+		
+		<label> Email address: </label>
+		<input  type="text" name="email" id="email" value="email" onfocus="clearThis(this)"  />
+		<br>
+		<br>
+
+		<p> Please let us know which type of item you would like more information on:</p>
+		<input type="checkbox" name="cards" value="cards"> I am interested in purchasing cards.<br>
+		<input type="checkbox" name="scrapbook" value="scrapbook"> I would like scrapbook page layouts.<br>
+		<input type="checkbox" name="scrapbook2" value="scrapbook2"> I would like compleated scrapbooks.<br>
+		<input type="checkbox" name="other" value="other"> I am interested other gift items.<br>
+		<input type="checkbox" name="decorative" value="decorative"> I am interested in decorative items.<br>
+		<input type="checkbox" name="journaling" value="journaling">I am interested in the journals.<br>
+		<br>
+		<br>
+		
+		<p>Please give us a few details about what you are looking for: <br>
+			(i.e. birthday card with flowers.  I would like it to be in pink and yellow)<br>
+			We will emial you back with different options that we have</p>
+			<br>
+			<textarea  id="description" onfocus="clearThis(this)">Description of what you would like</textarea>
+
+			<br>
+			<br>
+
+
+
+
+
+
+			<input class="button" id="submit" type="button" value="Submit" onclick="register();" />
+			<input class="button" id="clear" type="button" value="Reset" onclick="clearForm();" />
+
+		</form>
+		<script>
+
+			function clearForm() {   
+				document.getElementById("contact").reset();
+			}
+
+			function clearThis(target){
+				target.value= "";
+			}
+
+
+
+			function register() {
+				var firstName=document.getElementById('name').value;
+				var email=document.getElementById('email').value;	
+				var receive="";
+				var description=document.getElementById('description').value
+				var likes= document.forms[0];
+				var errors=new Array ();
+
+
+
+				if (firstName =="" || firstName =="Name") {
+					errors.push("Please enter your name");
+				}
+
+
+
+				if (email =="" || email =="email") {
+					errors.push ("Please enter your email address");
+				}
+
+
+				var intrest= [];
+				for (i=0; i<likes.length; i++) {
+					attr= likes[i].getAttribute('type');
+					if (attr=='checkbox' && (likes[i].checked)){
+						intrest.push (true);
+					}
+				}
+				
+				if (intrest.length == 0 ){
+					errors.push ("Please select an item you would like more information about");	
+				}
+
+				if (description =="" || description =="Description of what you would like") {
+					errors.push ("Please enter a description");
+				}
+
+				if (errors.length >0) {
+					var msg = "ERRORS:\n\n";
+					for (var e=0; e<errors.length; e++) {
+						msg+=errors[e] + "\n";
+					}
+					alert(msg);
+					return false;
+				}
+
+				return true;
+
+			}
+
+
+
+		</script>
+
+		<br>
+		<br>
+
+		<div id="footer">
+			<p>Copyright &#169; 2016 Barbara Baird
+				<br>
+				<a href="barbara@bairdsnet.net">barbara@bairdsnet.net</a>
+				<br>
+
+				(512)-961-3447
+				<br>
+
+			</p>
+		</div>
+
+
+		<div class="valid">  
+			<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fnova.umuc.edu%2F~ct388a05%2Ffinal%2Forder.html">
+				<img style="valid" src="htmlvalid.png" alt="HTML5 and CSS3 logo with checkmark" />
+			</a>
+			<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fnova.umuc.edu%2F~ct388a05%2Ffinal%2Fbbcraft.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">
+			<img style="valid" src="cssvalid.png" alt="HTML5 and CSS3 logo with checkmark" />
+		</a>
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fnova.umuc.edu%2F~ct388a05%2Ffinal%2Fcontact.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">
+			<br>
+			</div>
+
+
+
+
+		</body>
+		</html>
